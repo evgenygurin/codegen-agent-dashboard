@@ -48,7 +48,7 @@
   "crons": [
     {
       "path": "/api/cron/orchestrator",
-      "schedule": "*/5 * * * *"
+      "schedule": "0 6 * * *"
     },
     {
       "path": "/api/cron/cleanup",
