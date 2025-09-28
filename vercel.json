@@ -9,12 +9,6 @@
       "runtime": "nodejs20.x"
     }
   },
-  "env": {
-    "CODEGEN_API_KEY": "@codegen-api-key",
-    "CODEGEN_BASE_URL": "@codegen-base-url",
-    "NEXTAUTH_SECRET": "@nextauth-secret",
-    "NEXTAUTH_URL": "@nextauth-url"
-  },
   "headers": [
     {
       "source": "/(.*)",
