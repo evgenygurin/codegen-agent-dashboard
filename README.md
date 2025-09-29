@@ -18,6 +18,7 @@ A comprehensive Next.js dashboard for autonomous development workflows powered b
 - **Agent Configuration**: Set up automation rules, triggers, filters, and thresholds
 - **Monitoring & Analytics**: Performance charts, system health, and detailed analytics
 - **Security**: Vulnerability scanning and security monitoring
+- **Cyrus Integration**: AI-powered autonomous development agent for Linear issues
 
 ### Autonomous Workflows
 - **Full Development Cycle**: Complete autonomous development from review to deployment
@@ -36,6 +37,7 @@ A comprehensive Next.js dashboard for autonomous development workflows powered b
 - **HTTP Client**: Axios with interceptors
 - **Icons**: Lucide React
 - **Styling**: Tailwind CSS with CSS variables
+- **AI Integration**: Cyrus AI Agent for autonomous Linear issue processing
 
 ## 📦 Installation
 
@@ -124,7 +126,8 @@ src/
 │   │   ├── repository-management.tsx
 │   │   ├── agent-configuration.tsx
 │   │   ├── autonomous-orchestrator.tsx
-│   │   └── monitoring-analytics.tsx
+│   │   ├── monitoring-analytics.tsx
+│   │   └── cyrus-integration.tsx
 │   ├── providers/         # React context providers
 │   │   ├── codegen-provider.tsx
 │   │   └── query-provider.tsx
@@ -138,6 +141,32 @@ src/
 │   │   └── codegen.ts
 │   └── utils.ts           # Utility functions
 ```
+
+## 🤖 Cyrus AI Agent Integration
+
+The dashboard includes full integration with Cyrus, an autonomous AI development agent for Linear:
+
+### Cyrus Features
+- **Linear Issue Automation**: Automatically processes Linear issues and creates pull requests
+- **Repository Management**: Configure multiple repositories with different routing rules
+- **Real-time Monitoring**: Track Cyrus activity, processed issues, and error counts
+- **Team/Project Routing**: Route issues based on Linear teams, projects, or labels
+- **Tool Configuration**: Control which tools Cyrus can use (Read, Edit, Bash, Task, etc.)
+- **AI Mode Switching**: Different modes for debugging, building, and scoping
+
+### Configuration
+- **Repository Setup**: Connect your repositories with Linear workspaces
+- **Routing Rules**: Configure team keys, project keys, and label-based routing
+- **Tool Permissions**: Set allowed tools for different AI modes
+- **Prompt Templates**: Customize Cyrus behavior with prompt templates
+
+### Monitoring
+- **Status Overview**: Real-time status of Cyrus agent (Active/Paused)
+- **Issue Statistics**: Track active issues, processed issues, and errors
+- **Activity Logs**: Monitor last activity and system health
+- **Repository Status**: Individual repository activation controls
+
+For detailed Cyrus configuration, see [CYRUS_INTEGRATION.md](CYRUS_INTEGRATION.md).
 
 ## 🔌 API Integration
 
