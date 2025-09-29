@@ -1,290 +1,241 @@
-# 🤖 Codegen Agent Dashboard
+# Codegen Agent Dashboard
 
-**Autonomous Codegen Agent Dashboard** - A Next.js application with comprehensive Codegen API integration, real-time statistics visualization, queue management, and fully autonomous development workflows.
+A comprehensive Next.js dashboard for autonomous development workflows powered by Codegen API integration. This application provides real-time monitoring, task orchestration, and AI-powered autonomous development capabilities.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/evgenygurin/codegen-agent-dashboard)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![TypeScript](https://img.shields.io/badge/%3C%2F%3E-TypeScript-%230074c1.svg)](https://www.typescriptlang.org/)
+## 🚀 Features
 
-## ✨ Features
+### Core Functionality
+- **Autonomous Development Orchestrator**: AI-powered workflows that automatically review, fix, test, and optimize code
+- **Real-time Monitoring**: Live dashboard with performance metrics, system health, and activity tracking
+- **Repository Management**: Connect and manage multiple GitHub repositories with automated agent configuration
+- **Task Queue Management**: Advanced queue system with priority handling, dependencies, and progress tracking
+- **Agent Configuration**: Granular control over AI agent behavior, triggers, and automation settings
 
-### 🎯 Core Capabilities
-- **Real-time Dashboard** - Comprehensive statistics and performance monitoring
-- **Queue Management** - Advanced task scheduling and priority management
-- **Autonomous Orchestration** - Self-healing and self-optimizing system
-- **Multi-Repository Support** - Manage multiple Codegen repositories
-- **Security Monitoring** - Real-time security scanning and vulnerability management
+### Dashboard Components
+- **Overview**: Key metrics, recent activity, and system status at a glance
+- **Queue Management**: Real-time task monitoring with pause/resume/clear controls
+- **Repository Management**: Connect repositories, configure agents, and monitor activity
+- **Agent Configuration**: Set up automation rules, triggers, filters, and thresholds
+- **Monitoring & Analytics**: Performance charts, system health, and detailed analytics
+- **Security**: Vulnerability scanning and security monitoring
 
-### 🚀 Advanced Features
-- **Ultrathink Mode** - Fully autonomous decision-making and workflow execution
-- **Predictive Analytics** - AI-powered insights and recommendations
-- **Auto-scaling** - Dynamic resource allocation based on workload
-- **Real-time Notifications** - Instant alerts for critical events
-- **Advanced Filtering** - Smart search and filtering capabilities
+### Autonomous Workflows
+- **Full Development Cycle**: Complete autonomous development from review to deployment
+- **Quick Review & Fix**: Fast review and automatic fixes for urgent issues
+- **Test Generation**: Comprehensive test coverage generation
+- **Performance Optimization**: Code optimization and performance improvements
+- **Documentation**: Automatic documentation generation and updates
 
-### 🛠️ Technical Stack
-- **Frontend**: Next.js 15, React 19, TypeScript, Tailwind CSS
-- **UI Components**: Radix UI, Lucide Icons
+## 🛠️ Technology Stack
+
+- **Framework**: Next.js 15.5.4 with App Router
+- **Language**: TypeScript (strict mode)
+- **UI Components**: Radix UI + Tailwind CSS
 - **State Management**: TanStack Query (React Query)
-- **API Integration**: Axios, Custom Codegen Client
-- **Charts & Visualization**: Recharts
-- **Deployment**: Vercel, Docker support
+- **Charts**: Recharts for data visualization
+- **HTTP Client**: Axios with interceptors
+- **Icons**: Lucide React
+- **Styling**: Tailwind CSS with CSS variables
 
-## 🚀 Quick Start
-
-### Prerequisites
-
-- Node.js 18+ and pnpm
-- Codegen API key and access
-- Git
-
-### Installation
+## 📦 Installation
 
 1. **Clone the repository**
-```bash
-git clone https://github.com/evgenygurin/codegen-agent-dashboard.git
-cd codegen-agent-dashboard
-```
+   ```bash
+   git clone <repository-url>
+   cd codegen-agent-dashboard
+   ```
 
 2. **Install dependencies**
-```bash
-pnpm install
-```
+   ```bash
+   pnpm install
+   ```
 
-3. **Configure environment**
-```bash
-cp .env.example .env.local
-# Edit .env.local with your Codegen API credentials
-```
+3. **Configure environment variables**
+   ```bash
+   cp .env.example .env.local
+   ```
+   
+   Add your Codegen API configuration:
+   ```env
+   CODEGEN_API_KEY=your_api_key_here
+   CODEGEN_BASE_URL=https://api.codegen.com
+   CODEGEN_ORGANIZATION_ID=your_org_id
+   ```
 
-4. **Start development server**
-```bash
-pnpm dev
-```
+4. **Start the development server**
+   ```bash
+   pnpm dev
+   ```
 
-5. **Open in browser**
-Navigate to [http://localhost:3000](http://localhost:3000)
+5. **Open your browser**
+   Navigate to [http://localhost:3000](http://localhost:3000)
 
-## ⚙️ Configuration
-
-### Environment Variables
-
-Create a `.env.local` file with the following variables:
-
-```env
-# Required - Codegen API Configuration
-CODEGEN_API_KEY=your_codegen_api_key_here
-CODEGEN_BASE_URL=https://api.codegen.com
-CODEGEN_REPOSITORY_ID=your_repository_id
-CODEGEN_ORGANIZATION_ID=your_organization_id
-
-# Optional - Advanced Features
-ENABLE_AUTONOMOUS_MODE=true
-ENABLE_AUTO_DEPLOYMENT=false
-MAX_CONCURRENT_TASKS=10
-```
-
-See `.env.example` for a complete list of configuration options.
+## 🔧 Configuration
 
 ### Codegen API Setup
 
-1. **Get API Key**: Obtain your Codegen API key from your account settings
-2. **Repository Access**: Ensure your API key has access to the repositories you want to manage
-3. **Permissions**: Verify that your API key has sufficient permissions for:
-   - Repository management
-   - Pull request operations
-   - Check runs and status updates
-   - Webhook management
+1. **Get your API key** from the Codegen dashboard
+2. **Configure your organization** and repository settings
+3. **Set up webhooks** for real-time updates (optional)
 
-## 📊 Dashboard Overview
+### Agent Configuration
 
-### Overview Tab
-- **Quick Actions**: One-click operations for common tasks
-- **Statistics Cards**: Key metrics and performance indicators
-- **Recent Activity**: Live feed of recent events and actions
+The dashboard allows you to configure:
+- **Automation Settings**: Enable/disable specific automated actions
+- **Trigger Settings**: Configure when agents should be activated
+- **Filter Settings**: Define which files and paths to process
+- **Threshold Settings**: Set limits and performance thresholds
+
+## 📊 Usage
+
+### Getting Started
+
+1. **Configure API Connection**: Enter your Codegen API credentials in the settings
+2. **Connect Repositories**: Add your GitHub repositories to the dashboard
+3. **Configure Agents**: Set up autonomous development workflows
+4. **Monitor Activity**: Watch real-time activity and performance metrics
+
+### Autonomous Workflows
+
+1. **Start Autonomous Workflow**: Click "Start Autonomous Workflow" in the Agents tab
+2. **Monitor Progress**: Track task execution in the Queue Management tab
+3. **View Results**: Check completed tasks and generated artifacts
+4. **Analyze Performance**: Review analytics and optimization suggestions
 
 ### Queue Management
-- **Task Queue**: View and manage queued, running, and completed tasks
-- **Priority Management**: Adjust task priorities and dependencies
-- **Resource Monitoring**: Track resource usage and capacity
-- **Auto-scaling Controls**: Configure automatic scaling behavior
 
-### Repository Management
-- **Multi-repo Support**: Connect and manage multiple repositories
-- **Health Monitoring**: Track repository health and activity
-- **Configuration**: Per-repository settings and automation rules
+- **Add Tasks**: Manually add tasks to the queue or let autonomous workflows handle it
+- **Control Execution**: Pause, resume, or clear the entire queue
+- **Monitor Progress**: Real-time progress tracking with detailed logs
+- **Handle Dependencies**: Tasks can depend on other tasks for proper execution order
 
-### Autonomous Agents
-- **Orchestrator**: Configure the autonomous decision-making system
-- **Performance Tuning**: Adjust AI behavior and confidence thresholds
-- **Learning Analytics**: View learning progress and decision accuracy
+## 🏗️ Project Structure
 
-### Monitoring
-- **System Health**: Real-time system status and performance metrics
-- **Error Tracking**: Monitor and analyze errors and failures
-- **Performance Analytics**: Detailed performance insights and trends
-
-### Security
-- **Vulnerability Scanning**: Automated security scanning
-- **Access Control**: Manage permissions and access levels
-- **Audit Logs**: Complete audit trail of all actions and decisions
-
-## 🤖 Autonomous Mode
-
-The dashboard includes a sophisticated autonomous orchestration system that can:
-
-- **Self-Monitor**: Continuously monitor system health and performance
-- **Auto-Repair**: Automatically detect and fix common issues
-- **Predictive Scaling**: Scale resources based on predicted demand
-- **Intelligent Decision Making**: Make autonomous decisions with configurable confidence levels
-- **Learning System**: Learn from outcomes to improve future decisions
-
-### Enabling Autonomous Mode
-
-1. Set `ENABLE_AUTONOMOUS_MODE=true` in your environment
-2. Configure thresholds and parameters in the Agents tab
-3. Monitor autonomous decisions in the dashboard
-4. Adjust settings based on performance and requirements
-
-## 🚢 Deployment
-
-### Deploy to Vercel (Recommended)
-
-1. **One-click Deploy**
-   [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/evgenygurin/codegen-agent-dashboard)
-
-2. **Manual Deployment**
-```bash
-# Install Vercel CLI
-pnpm add -g vercel
-
-# Deploy
-vercel --prod
 ```
-
-3. **Configure Environment Variables**
-   Add your environment variables in the Vercel dashboard under Settings > Environment Variables.
-
-### Deploy with Docker
-
-```bash
-# Build Docker image
-docker build -t codegen-dashboard .
-
-# Run container
-docker run -p 3000:3000 --env-file .env.local codegen-dashboard
-```
-
-### Deploy to Other Platforms
-
-The application can be deployed to any platform that supports Node.js applications:
-- Netlify
-- Railway
-- Heroku
-- AWS Amplify
-- Google Cloud Run
-
-## 🔧 Development
-
-### Project Structure
-
-```text
 src/
-├── app/                    # Next.js App Router pages
-├── components/            # React components
-│   ├── dashboard/        # Dashboard-specific components
-│   ├── providers/        # Context providers
-│   └── ui/              # Reusable UI components
-├── lib/                  # Utility libraries
-│   ├── api/             # API clients and endpoints
-│   ├── autonomous/      # Autonomous orchestration logic
-│   ├── hooks/           # Custom React hooks
-│   ├── types/           # TypeScript type definitions
-│   └── utils.ts         # Utility functions
+├── app/                    # Next.js App Router
+│   ├── globals.css        # Global styles
+│   ├── layout.tsx         # Root layout
+│   └── page.tsx           # Main dashboard page
+├── components/
+│   ├── dashboard/         # Dashboard components
+│   │   ├── stats-overview.tsx
+│   │   ├── queue-management.tsx
+│   │   ├── repository-management.tsx
+│   │   ├── agent-configuration.tsx
+│   │   ├── autonomous-orchestrator.tsx
+│   │   └── monitoring-analytics.tsx
+│   ├── providers/         # React context providers
+│   │   ├── codegen-provider.tsx
+│   │   └── query-provider.tsx
+│   └── ui/                # Reusable UI components
+├── lib/
+│   ├── api/               # API client
+│   │   └── codegen-client.ts
+│   ├── hooks/             # Custom React hooks
+│   │   └── use-codegen.ts
+│   ├── types/             # TypeScript type definitions
+│   │   └── codegen.ts
+│   └── utils.ts           # Utility functions
 ```
 
-### Available Scripts
+## 🔌 API Integration
 
-```bash
-# Development
-pnpm dev              # Start development server
-pnpm build            # Build for production
-pnpm start            # Start production server
-pnpm lint             # Run ESLint
-pnpm type-check       # Run TypeScript check
+The dashboard integrates with Codegen's comprehensive API:
 
-# Testing
-pnpm test             # Run tests
-pnpm test:watch       # Run tests in watch mode
-pnpm test:coverage    # Run tests with coverage
+### Core Endpoints
+- **Repositories**: Manage connected repositories
+- **Pull Requests**: Monitor and manage pull requests
+- **Checks**: Track CI/CD checks and results
+- **Actions**: Execute automated development actions
+- **Queue**: Manage task queues and workflows
+- **Webhooks**: Real-time event notifications
 
-# Deployment
-vercel                # Deploy to Vercel
-```
+### Authentication
+- **API Key**: Bearer token authentication
+- **Organization**: Multi-tenant organization support
+- **Repository**: Per-repository configuration and permissions
 
-### Adding New Features
+## 📈 Monitoring & Analytics
 
-1. **Create Components**: Add new components in `src/components/`
-2. **Add API Endpoints**: Extend the Codegen client in `src/lib/api/`
-3. **Update Types**: Add TypeScript types in `src/lib/types/`
-4. **Create Hooks**: Add React hooks in `src/lib/hooks/`
-5. **Test**: Add tests for new functionality
+### Real-time Metrics
+- **Success Rates**: Track automation success rates
+- **Response Times**: Monitor API and task response times
+- **Queue Performance**: Track queue processing efficiency
+- **System Health**: Monitor system resources and status
+
+### Performance Analytics
+- **Trend Analysis**: Historical performance trends
+- **Workflow Analytics**: Detailed workflow performance metrics
+- **Resource Usage**: CPU, memory, and storage monitoring
+- **Alert System**: Automated alerts for issues and anomalies
+
+## 🚀 Deployment
+
+### Vercel Deployment
+
+1. **Connect to Vercel**
+   ```bash
+   vercel login
+   vercel link
+   ```
+
+2. **Set environment variables** in Vercel dashboard
+
+3. **Deploy**
+   ```bash
+   vercel --prod
+   ```
+
+### Docker Deployment
+
+1. **Build the image**
+   ```bash
+   docker build -t codegen-agent-dashboard .
+   ```
+
+2. **Run the container**
+   ```bash
+   docker run -p 3000:3000 \
+     -e CODEGEN_API_KEY=your_key \
+     -e CODEGEN_BASE_URL=your_url \
+     codegen-agent-dashboard
+   ```
 
 ## 🤝 Contributing
 
-We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
+1. **Fork the repository**
+2. **Create a feature branch**
+   ```bash
+   git checkout -b feature/amazing-feature
+   ```
+3. **Commit your changes**
+   ```bash
+   git commit -m 'Add amazing feature'
+   ```
+4. **Push to the branch**
+   ```bash
+   git push origin feature/amazing-feature
+   ```
+5. **Open a Pull Request**
 
-### Development Setup
-
-1. Fork the repository
-2. Create a feature branch: `git checkout -b feature/amazing-feature`
-3. Make your changes
-4. Add tests for new functionality
-5. Ensure all tests pass: `pnpm test`
-6. Commit your changes: `git commit -m 'feat: add amazing feature'`
-7. Push to the branch: `git push origin feature/amazing-feature`
-8. Open a Pull Request
-
-## 🐛 Troubleshooting
-
-### Common Issues
-
-**Connection Issues**
-- Verify your Codegen API key is valid and has proper permissions
-- Check that the base URL is correct
-- Ensure your network allows connections to the Codegen API
-
-**Performance Issues**
-- Adjust the `MAX_CONCURRENT_TASKS` environment variable
-- Monitor system resources and scale if necessary
-- Check for network latency issues
-
-**Build Issues**
-- Clear Next.js cache: `rm -rf .next`
-- Reinstall dependencies: `rm -rf node_modules && pnpm install`
-- Check for TypeScript errors: `pnpm type-check`
-
-### Getting Help
-
-- 📖 [Documentation](https://docs.codegen.com)
-- 💬 [Discord Community](https://discord.gg/codegen)
-- 🐛 [Issue Tracker](https://github.com/evgenygurin/codegen-agent-dashboard/issues)
-- 📧 [Email Support](mailto:support@codegen.com)
-
-## 📄 License
+## 📝 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
+## 🆘 Support
+
+- **Documentation**: [Codegen Docs](https://docs.codegen.com)
+- **Issues**: [GitHub Issues](https://github.com/your-repo/issues)
+- **Discord**: [Codegen Community](https://discord.gg/codegen)
+
 ## 🙏 Acknowledgments
 
-- [Codegen](https://codegen.com) - For the amazing AI-powered development platform
-- [Vercel](https://vercel.com) - For the excellent hosting and deployment platform
-- [Next.js](https://nextjs.org) - For the powerful React framework
-- [Radix UI](https://radix-ui.com) - For the accessible UI components
-- [Tailwind CSS](https://tailwindcss.com) - For the utility-first CSS framework
+- **Codegen Team** for the amazing API and platform
+- **Vercel** for the excellent Next.js framework and deployment platform
+- **Radix UI** for the accessible component primitives
+- **TanStack** for the powerful React Query library
 
 ---
 
-**Built with ❤️ by the Codegen community**
-
-[![Star on GitHub](https://img.shields.io/github/stars/evgenygurin/codegen-agent-dashboard?style=social)](https://github.com/evgenygurin/codegen-agent-dashboard)
+**Built with ❤️ for autonomous development**

@@ -7,6 +7,11 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { StatsOverview } from "@/components/dashboard/stats-overview"
 import { QueueManagement } from "@/components/dashboard/queue-management"
+import { RepositoryManagement } from "@/components/dashboard/repository-management"
+import { AgentConfiguration } from "@/components/dashboard/agent-configuration"
+import { AutonomousOrchestrator } from "@/components/dashboard/autonomous-orchestrator"
+import { MonitoringAnalytics } from "@/components/dashboard/monitoring-analytics"
+import { CyrusIntegration } from "@/components/dashboard/cyrus-integration"
 import { useCodegenContext } from "@/components/providers/codegen-provider"
 import {
   Settings,
@@ -49,7 +54,7 @@ export default function Dashboard() {
       </div>
 
       <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-4">
-        <TabsList className="grid w-full grid-cols-6">
+        <TabsList className="grid w-full grid-cols-7">
           <TabsTrigger value="overview" className="flex items-center gap-2">
             <BarChart3 className="h-4 w-4" />
             Overview
@@ -65,6 +70,10 @@ export default function Dashboard() {
           <TabsTrigger value="agents" className="flex items-center gap-2">
             <Brain className="h-4 w-4" />
             Agents
+          </TabsTrigger>
+          <TabsTrigger value="cyrus" className="flex items-center gap-2">
+            <Brain className="h-4 w-4" />
+            Cyrus
           </TabsTrigger>
           <TabsTrigger value="monitoring" className="flex items-center gap-2">
             <Activity className="h-4 w-4" />
@@ -115,16 +124,23 @@ export default function Dashboard() {
         </TabsContent>
 
         <TabsContent value="repositories" className="space-y-4">
-          <RepositoriesView />
+          <RepositoryManagement />
         </TabsContent>
 
-        <TabsContent value="agents" className="space-y-4">
-          <AgentsView />
-        </TabsContent>
+            <TabsContent value="agents" className="space-y-4">
+              <div className="space-y-6">
+                <AgentConfiguration />
+                <AutonomousOrchestrator />
+              </div>
+            </TabsContent>
 
-        <TabsContent value="monitoring" className="space-y-4">
-          <MonitoringView />
-        </TabsContent>
+            <TabsContent value="cyrus" className="space-y-4">
+              <CyrusIntegration />
+            </TabsContent>
+
+            <TabsContent value="monitoring" className="space-y-4">
+              <MonitoringAnalytics />
+            </TabsContent>
 
         <TabsContent value="security" className="space-y-4">
           <SecurityView />
@@ -217,74 +233,6 @@ function QuickActionCard({ title, description, icon, action, color }: QuickActio
   )
 }
 
-function RepositoriesView() {
-  return (
-    <Card>
-      <CardHeader>
-        <CardTitle className="flex items-center gap-2">
-          <GitBranch className="h-5 w-5" />
-          Repositories
-        </CardTitle>
-        <CardDescription>
-          Manage and monitor your connected repositories
-        </CardDescription>
-      </CardHeader>
-      <CardContent>
-        <div className="text-center py-8 text-muted-foreground">
-          <GitBranch className="h-12 w-12 mx-auto mb-4 opacity-50" />
-          <p>Repository management will be implemented here.</p>
-          <p className="text-sm">Connect and configure your GitHub repositories.</p>
-        </div>
-      </CardContent>
-    </Card>
-  )
-}
-
-function AgentsView() {
-  return (
-    <Card>
-      <CardHeader>
-        <CardTitle className="flex items-center gap-2">
-          <Brain className="h-5 w-5" />
-          AI Agents
-        </CardTitle>
-        <CardDescription>
-          Configure and monitor autonomous development agents
-        </CardDescription>
-      </CardHeader>
-      <CardContent>
-        <div className="text-center py-8 text-muted-foreground">
-          <Brain className="h-12 w-12 mx-auto mb-4 opacity-50" />
-          <p>Agent configuration will be implemented here.</p>
-          <p className="text-sm">Set up autonomous development workflows.</p>
-        </div>
-      </CardContent>
-    </Card>
-  )
-}
-
-function MonitoringView() {
-  return (
-    <Card>
-      <CardHeader>
-        <CardTitle className="flex items-center gap-2">
-          <Activity className="h-5 w-5" />
-          Monitoring
-        </CardTitle>
-        <CardDescription>
-          Real-time monitoring and performance metrics
-        </CardDescription>
-      </CardHeader>
-      <CardContent>
-        <div className="text-center py-8 text-muted-foreground">
-          <Activity className="h-12 w-12 mx-auto mb-4 opacity-50" />
-          <p>Monitoring dashboard will be implemented here.</p>
-          <p className="text-sm">Track performance and system health.</p>
-        </div>
-      </CardContent>
-    </Card>
-  )
-}
 
 function SecurityView() {
   return (
